@@ -1,0 +1,10 @@
+--- earth3d/listViewServiceItem.cpp~	2005-08-20 06:44:35.000000000 +0300
++++ earth3d/listViewServiceItem.cpp	2011-06-23 11:20:34.264065874 +0300
+@@ -1,6 +1,7 @@
+ #include "listViewServiceItem.h"
+ #include <qdom.h>
+ #include <qpixmap.h>
++#include <stdlib.h>
+ 
+ ListViewServiceItem::ListViewServiceItem ( QListViewItem *parent, QListViewItem *after, QDomNode text, const char *connection, const char *sender, int countParts, struct part_t *parts, ConnectNetworkService *cns, QString form )
+   : QListViewItem(parent, after) {
