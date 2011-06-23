@@ -21,6 +21,7 @@ display recent satellite images and map data.
 %setup -q -n %{name}
 %patch0 -p1
 %patch1 -p1
+echo "#include <gltest.h>" > gltestwidget.h
 
 %build
 export QTDIR=/usr
