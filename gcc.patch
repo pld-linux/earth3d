@@ -99,3 +99,13 @@
  #include "geometry2d3dFactory.h"
  
  Geometry2D3DFactory::Geometry2D3DFactory() {
+--- earth3d/formview.ui~	2006-08-04 19:22:09.000000000 +0300
++++ earth3d/formview.ui	2011-06-23 11:58:43.679723350 +0300
+@@ -464,6 +464,7 @@
+ </connections>
+ <includes>
+     <include location="global" impldecl="in implementation">iostream</include>
++	<include location="global" impldecl="in implementation">stdlib.h</include>
+     <include location="local" impldecl="in implementation">listBoxServiceItem.h</include>
+     <include location="local" impldecl="in declaration">connectNetworkService.h</include>
+     <include location="local" impldecl="in declaration">serviceFoundLister.h</include>
