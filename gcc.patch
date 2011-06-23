@@ -8,3 +8,94 @@
  
  ListViewServiceItem::ListViewServiceItem ( QListViewItem *parent, QListViewItem *after, QDomNode text, const char *connection, const char *sender, int countParts, struct part_t *parts, ConnectNetworkService *cns, QString form )
    : QListViewItem(parent, after) {
+--- earth3d/network/urlDownload.cpp~	2011-06-23 11:30:30.000000000 +0300
++++ earth3d/network/urlDownload.cpp	2011-06-23 11:30:36.608535852 +0300
+@@ -12,7 +12,7 @@
+ #include "downloadFinishedEvent.h"
+ 
+ #ifndef WIN32
+-#include <alloc.h>
++#include <stdlib.h>
+ #endif
+ 
+ using namespace std;
+--- earth3d/network/urlTools.cpp~	2005-10-29 02:50:24.000000000 +0300
++++ earth3d/network/urlTools.cpp	2011-06-23 11:31:17.987112367 +0300
+@@ -4,6 +4,7 @@
+ #include <iostream>
+ #include <qstringlist.h>
+ #include <qregexp.h>
++#include <stdlib.h>
+ 
+ namespace UrlTools {
+   void rewrite(QDomNode n, QString baseurlstring);
+--- earth3d/network/serviceFoundLister.cpp~	2005-08-20 06:44:35.000000000 +0300
++++ earth3d/network/serviceFoundLister.cpp	2011-06-23 11:31:46.151745645 +0300
+@@ -3,6 +3,7 @@
+ #include "listViewServiceItem.h"
+ #include <qdom.h>
+ #include <assert.h>
++#include <stdlib.h>
+ #include "formview.h"
+ #include "insertListViewItemEvent.h"
+ QMutex serviceFoundGlobalMutex;
+--- earth3d/draw/treeDrawPOI.cpp~	2004-08-20 18:26:55.000000000 +0300
++++ earth3d/draw/treeDrawPOI.cpp	2011-06-23 11:32:36.330728317 +0300
+@@ -1,6 +1,7 @@
+ #define GL_GLEXT_PROTOTYPES
+ #include "treeDrawPOI.h"
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <GL/glext.h>
+ #include "treeDrawPOISign.h"
+ 
+--- earth3d/draw/treeDrawFactory.cpp~	2004-08-20 18:26:55.000000000 +0300
++++ earth3d/draw/treeDrawFactory.cpp	2011-06-23 11:33:15.022514116 +0300
+@@ -1,4 +1,5 @@
+ #include "treeDrawFactory.h"
++#include <stdlib.h>
+ #include <qtextstream.h>
+ #include <qdom.h>
+ #include "treeDraw.h"
+--- earth3d/draw/drawSceneObjectTriangle.cpp~	2004-08-20 18:26:55.000000000 +0300
++++ earth3d/draw/drawSceneObjectTriangle.cpp	2011-06-23 11:33:50.617490305 +0300
+@@ -1,3 +1,4 @@
++#include <stdlib.h>
+ #include "drawSceneObjectTriangle.h"
+ 
+ DrawSceneObjectTriangle::DrawSceneObjectTriangle(DrawScene *scene) 
+--- earth3d/draw/drawSceneObjectQuad.cpp~	2004-08-20 18:26:55.000000000 +0300
++++ earth3d/draw/drawSceneObjectQuad.cpp	2011-06-23 11:34:16.101999849 +0300
+@@ -1,3 +1,4 @@
++#include <stdlib.h>
+ #include "drawSceneObjectQuad.h"
+ 
+ DrawSceneObjectQuad::DrawSceneObjectQuad(DrawScene *scene) 
+--- earth3d/draw/drawSceneObjectTranslate.cpp~	2004-08-20 18:26:55.000000000 +0300
++++ earth3d/draw/drawSceneObjectTranslate.cpp	2011-06-23 11:34:42.013195746 +0300
+@@ -1,3 +1,4 @@
++#include <stdlib.h>
+ #include "drawSceneObjectTranslate.h"
+ 
+ DrawSceneObjectTranslate::DrawSceneObjectTranslate(DrawScene *scene)
+--- earth3d/draw/drawSceneObjectScale.cpp~	2004-08-20 18:26:55.000000000 +0300
++++ earth3d/draw/drawSceneObjectScale.cpp	2011-06-23 11:35:07.481037842 +0300
+@@ -1,3 +1,4 @@
++#include <stdlib.h>
+ #include "drawSceneObjectScale.h"
+ 
+ DrawSceneObjectScale::DrawSceneObjectScale(DrawScene *scene)
+--- earth3d/draw/drawSceneObjectRotatequaternion.cpp~	2004-08-20 18:26:55.000000000 +0300
++++ earth3d/draw/drawSceneObjectRotatequaternion.cpp	2011-06-23 11:36:04.330328282 +0300
+@@ -1,3 +1,4 @@
++#include <stdlib.h>
+ #include "drawSceneObjectRotatequaternion.h"
+ 
+ DrawSceneObjectRotatequaternion::DrawSceneObjectRotatequaternion(DrawScene *scene)
+--- earth3d/geometry/geometry2d3dFactory.cpp~	2004-08-19 02:48:59.000000000 +0300
++++ earth3d/geometry/geometry2d3dFactory.cpp	2011-06-23 11:37:08.293280247 +0300
+@@ -1,3 +1,4 @@
++#include <stdlib.h>
+ #include "geometry2d3dFactory.h"
+ 
+ Geometry2D3DFactory::Geometry2D3DFactory() {
