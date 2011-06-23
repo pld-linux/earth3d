@@ -7,6 +7,7 @@ Group:		Applications/Graphics
 Source0:	http://downloads.sourceforge.net/earth3d/%{name}_client-%{version}-src.tar.bz2
 # Source0-md5:	d273437a473f66401b01acf7521808c3
 Patch0:		gcc.patch
+Patch1:		libpng.patch
 URL:		http://www.earth3d.org/
 BuildRequires:	ImageMagick-devel
 BuildRequires:	qt-devel
@@ -19,6 +20,7 @@ display recent satellite images and map data.
 %prep
 %setup -q -n %{name}
 %patch0 -p1
+%patch1 -p1
 
 %build
 export QTDIR=/usr

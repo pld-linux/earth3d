@@ -1,0 +1,20 @@
+--- earth3d/pngutils.cpp~	2011-06-23 11:38:20.000000000 +0300
++++ earth3d/pngutils.cpp	2011-06-23 11:38:22.730048870 +0300
+@@ -28,7 +28,7 @@
+     /* read image */
+     int depth, color_type, interlace_type;
+ 
+-    png_read_png(png_ptr, info_ptr, 0, png_voidp_NULL);
++    png_read_png(png_ptr, info_ptr, 0, NULL);
+ //     png_read_end(png_ptr, info_ptr);
+     height = png_get_image_height(png_ptr, info_ptr);
+     width  = png_get_image_width(png_ptr, info_ptr);
+@@ -60,7 +60,7 @@
+    }
+    
+    /* clean */
+-   png_destroy_read_struct(&png_ptr, &info_ptr, png_infopp_NULL);
++   png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+ //     png_set_read_fn(png_ptr, NULL, NULL);
+    delete(inbuffer);
+ #ifdef EARTH3DDEBUG
