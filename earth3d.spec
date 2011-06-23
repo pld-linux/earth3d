@@ -36,11 +36,15 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 # The qmake install target is empty.  Do the install here instead.
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install -p earth3d $RPM_BUILD_ROOT%{_bindir}
+cp -p earth3d.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog
+%doc Changelog README
+%attr(755,root,root) %{_bindir}/earth3d
+%{_mandir}/man1/earth3d.1*
