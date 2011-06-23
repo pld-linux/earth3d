@@ -1,0 +1,11 @@
+diff -Naur earth3d-orig/earth3d.pro earth3d/earth3d.pro
+--- earth3d-orig/earth3d.pro	2005-10-28 04:06:01 +0300
++++ earth3d/earth3d.pro	2006-03-07 18:05:13 +0200
+@@ -19,6 +19,7 @@
+   OBJECTS_DIR = .obj
+ !mac {
+   DEFINES	+= LINUX
++  LIBS += -lpng
+ #  LIBS += -ljsw
+ #  QMAKE_CXXFLAGS_RELEASE += -march=pentium4 -O2 -pipe -fomit-frame-pointer
+ #  QMAKE_CXXFLAGS_RELEASE += -march=athlon-xp -O2 -pipe -fomit-frame-pointer
